@@ -10,7 +10,8 @@ class MonkeysController extends \BaseController {
 	 */
 	public function index()
 	{
-		//
+		$monkeys = Monkey::all();
+		return Response::json($monkeys->toArray());
 	}
 
 
